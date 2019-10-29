@@ -50,6 +50,17 @@ fun main() {
 
     checkArg("Hello")
     checkArg(5)
+
+    println("----------------------------------------")
+
+    var changeNum : Int = 25
+    var changeNum2 : Int = 7
+
+    changeNum = changeNum xor changeNum2  // xor 연산 세번하면, 스왑가능 
+    changeNum2 = changeNum xor changeNum2
+    changeNum = changeNum xor changeNum2
+
+    println("${changeNum}  ${changeNum2}")
 }
 
 fun checkArg(x : Any) {
