@@ -32,11 +32,32 @@ fun main() {
     println("----------------------------------------")
 
 
-    val x : Any
+    var x : Any // Any형은 모든 클래스들의 부모 클래스, 즉 슈퍼 클래스임
     x = "Hello" // 아직 Any형
     if(x is String) { //is로 타입 검사하는 순간, 해당 타입으로 자동 형변환(Any -> String) ㄴ
         println(x.length)
     }
 
+    println("----------------------------------------")
+    var asVar : String? = "Hello"
+    var y : Int = 5
 
+    asVar = asVar + (y as? String)
+
+    println(asVar)
+
+    println("----------------------------------------")
+
+    checkArg("Hello")
+    checkArg(5)
+}
+
+fun checkArg(x : Any) {
+    if(x is String) {
+        println("x is String : $x")
+    }
+
+    if(x is Int) {
+        println("x is Int : $x")
+    }
 }
