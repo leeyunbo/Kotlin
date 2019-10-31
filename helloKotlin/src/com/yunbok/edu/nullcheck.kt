@@ -56,7 +56,7 @@ fun main() {
     var changeNum : Int = 25
     var changeNum2 : Int = 7
 
-    changeNum = changeNum xor changeNum2  // xor 연산 세번하면, 스왑가능 
+    changeNum = changeNum xor changeNum2  // xor 연산 세번하면, 스왑가능
     changeNum2 = changeNum xor changeNum2
     changeNum = changeNum xor changeNum2
 
