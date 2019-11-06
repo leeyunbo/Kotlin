@@ -41,6 +41,6 @@ fun main() {
     callbyValue(out(3,5)) //값에 의한 전달
 
     funcParam(3,5, ::sumLambda) // :: 덕분에 인자와 리턴값이 같으므로 일반함수도 전달이 가능해짐 (이름으로)
-    
+
 
 }
