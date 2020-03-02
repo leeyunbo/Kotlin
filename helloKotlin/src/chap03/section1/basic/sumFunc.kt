@@ -1,4 +1,4 @@
-package chap03.section1
+package chap03.section1.basic
 
 fun sum(a : Int, b : Int) = a + b
 fun max(a : Int, b : Int) = if(a>b) a else b  //함수의 각 정보는 프레임이라는 정보로 스택메모리의 높은 주소부터 거꾸로 자라듯이 채워져감
@@ -20,9 +20,9 @@ fun variableArgs(vararg counts : Int) { //가변인자 사용, counts는 Int형 
 }
 
 fun main() {
-    val result1 = sum(3,2)
-    val result2 = sum(6,7) //함수의 재사용!
-    val max_result1 = max(3,2)
+    val result1 = sum(3, 2)
+    val result2 = sum(6, 7) //함수의 재사용!
+    val max_result1 = max(3, 2)
 
 
     println(result1)               //    힙은 반대로 낮은주소에서 높은주소로 접근, 따라서 스택과 힙이 서로 침범할 수도 있음 --> 스택 오버플로우(재귀 함수 잘못만들면 발생함)
@@ -31,10 +31,10 @@ fun main() {
                                   // 다른 함수안에 있는 변수끼리는 이름이 같아도 상관 없음, 왜냐 다른 프레임에 존재하기 때문에
                                   // 함수는 들어온 순 반대로 소멸, 스택은 원래 후입선출인거 알죠?
     add_Inform("이윤복")
-    add_Inform("이윤복","servers1@naver.com")
+    add_Inform("이윤복", "servers1@naver.com")
 
     defaultXYZ()
     defaultXYZ(x = 200, z = 800) // 파이썬과 다르게 이렇게 정해서 값을 지정해줄 수 있다.
 
-    variableArgs(1,2,3,4,5,6,7,8,9)
+    variableArgs(1, 2, 3, 4, 5, 6, 7, 8, 9)
 }

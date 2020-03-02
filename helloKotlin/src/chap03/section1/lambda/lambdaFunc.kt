@@ -1,4 +1,4 @@
-package chap03.section1
+package chap03.section1.lambda
 
 //함수형 프로그래밍의 정의와 특징
 //1. 순수 함수를 사용해야 한다.
@@ -19,7 +19,7 @@ package chap03.section1
 fun mul(a : Int, b : Int) = a*b
 fun highFunc(sum : (Int, Int) -> Int, a : Int, b : Int) : Int = sum(a,b) // 두 개의 Int 형 인자를 받고, Int형 값을 반환하는 일급함수를 받는 고차 함수
 //고차 함수 : 다른 함수를 인자로 사용하거나, 함수를 결괏값으로 반환하는 함수 즉, 일급 객체 혹은 일급 함수를 서로 주고받을 수 있는 함수가 고차 함수
-fun mulFunc_Connecter(a : Int, b : Int) = mul(a,b)  //고차함수, 일급함수를 반환 값으로 사용
+fun mulFunc_Connecter(a : Int, b : Int) = mul(a, b)  //고차함수, 일급함수를 반환 값으로 사용
 
 fun callbyName(b : (Int, Int) -> Int)  {}
 fun callbyValue(num : Int) {}
@@ -35,12 +35,25 @@ fun main() {
     val multi = {x : Int, y : Int -> x * y} // (Int, Int) -> Int =.. 생략, 왜냐 자료형을 명시했으니까
     result = multi(10,20)
     println(result)
-    println( mul(highFunc({x,y -> x + y},10,20), 30) ) //고차 함수, 일급 함수 인자로 사용
+    println(
+        mul(
+            highFunc(
+                { x, y -> x + y },
+                10,
+                20
+            ), 30
+        )
+    ) //고차 함수, 일급 함수 인자로 사용
 
     callbyName(out)  // 함수의 이름을 전달 -
-    callbyValue(out(3,5)) //값에 의한 전달
+    callbyValue(
+        out(
+            3,
+            5
+        )
+    ) //값에 의한 전달
 
-    funcParam(3,5, ::sumLambda) // :: 덕분에 인자와 리턴값이 같으므로 일반함수도 전달이 가능해짐 (이름으로)
+    funcParam(3, 5, ::sumLambda) // :: 덕분에 인자와 리턴값이 같으므로 일반함수도 전달이 가능해짐 (이름으로)
 
 
 }

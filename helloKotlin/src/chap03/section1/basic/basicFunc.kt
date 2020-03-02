@@ -1,4 +1,4 @@
-package chap03.section1
+package chap03.section1.basic
 
 fun mySum(a : Int, b : Int) : Int {
     return a + b
