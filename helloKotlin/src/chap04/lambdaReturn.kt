@@ -2,6 +2,10 @@ package chap04
 
 fun main() {
     retFunc()
+    fun greet() = {println("Hello")}
+    fun greet2() = fun() {println("hello")}
+    greet()()
+    greet2()()
 }
 
 fun inlineLambda(a : Int, b : Int, out : (Int, Int) -> Unit) {
