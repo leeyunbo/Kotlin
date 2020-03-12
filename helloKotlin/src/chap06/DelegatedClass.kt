@@ -1,5 +1,9 @@
 package chap06
 
+/**
+ * by : 위임, 즉 어떤 특정일을 대신 하라고 명령을 내리는 것
+ * class CarModel(val model : String, impl : Car) : Car by impl => Car Interface에서 정의하고 있는 impl의 모든 멤버를 CarModel에게 위임한다.011111111111111111111111111111111111111
+ */
 interface Car {
     fun go() : String
 }
