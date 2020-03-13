@@ -2,6 +2,7 @@ package chap04
 
 fun main() {
     retFunc()
+    retFunc2()
     fun greet() = {println("Hello")}
     fun greet2() = fun() {println("hello")}
     greet()()
@@ -17,7 +18,7 @@ fun retFunc() { //@lit라벨을 사용하면 inline이 아닌 함수에서도
                 // 심지어 비지역반환도 아니라서 retFunc가 종료되지도 않고, lambda 함수만 종료!
                 // 암묵적 라벨 : 빠져나갈 함수의 이름을 라벨로 사용 예) @inlineLambda ..결과는 밑의 코드에서 사용한 명시적 라벨과 똑같음
     println("start of retFunc")
-    inlineLambda(13,3) lit@{a,b ->
+    inlineLambda(13,3) lit@{a : Int,b : Int -> Unit
         val result = a + b
         if(result > 10) return@lit
         println("result : $result")
@@ -25,9 +26,11 @@ fun retFunc() { //@lit라벨을 사용하면 inline이 아닌 함수에서도
     println("end of retFunc")
 }
 
+/**
+ */
 fun retFunc2() {
     println("start of retFunc Using Anonymous Function")
-    inlineLambda(13,3, fun(a,b) {
+    inlineLambda(13,3, fun(a,b) : Unit {
         val result = a + b
         if(result > 10) return
         println("result : $result")

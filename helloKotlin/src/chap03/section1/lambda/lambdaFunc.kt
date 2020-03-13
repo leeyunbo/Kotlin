@@ -32,7 +32,7 @@ fun funcParam(a : Int, b : Int, c : (Int, Int) -> Int) : Int {
 fun main() {
 
     var result : Int
-    val multi = {x : Int, y : Int -> x * y} // (Int, Int) -> Int =.. 생략, 왜냐 자료형을 명시했으니까
+    val multi : (Int,Int) -> Int = {x : Int, y : Int -> x * y} // (Int, Int) -> Int =.. 생략, 왜냐 자료형을 명시했으니까
     result = multi(10,20)
     println(result)
     println(

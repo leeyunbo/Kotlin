@@ -6,15 +6,44 @@ package chap07
  */
 
 abstract class Printer {
+    abstract val name : String
+    abstract val spec : String
     abstract fun print()
 }
 
-val myPrinter = object : Printer() {
+class myPrinter(override val name: String, override val spec: String) : Printer() {
+    override fun print() {
+        println("출력")
+    }
+    operator fun component1() = name
+    operator fun component2() = spec
+}
+
+val myPrinters = object : Printer() {
+    override val name: String = "SG-105"
+    override val spec: String = "Color"
     override fun print() {
         println("출력")
     }
 }
 
 fun main() {
-    myPrinter.print()
+    val printer : myPrinter = myPrinter("1","COLOR")
+    val printer2 : myPrinter = myPrinter("2","NOT COLOR")
+    val printers = listOf(printer,printer2)
+
+    for((name, spec) in printers) {
+        println("$name $spec")
+    }
+
+    val myLamda = {
+        (nameLa, specLa) : myPrinter ->
+            println(nameLa)
+            println(specLa)
+    }
+    myLamda(printer)
+    myLamda(printer2)
+
+    val myLamda2 : (Int,Int) -> Int = {a : Int, b : Int -> a+b}
+
 }
