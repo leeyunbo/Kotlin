@@ -6,6 +6,9 @@ package chap08
  * 메서드의 매개변수로 이용하기 위해서는 in 형식이 필요하다.
  * out을 사용하는 경우에 형식 매개변수를 갖는 프로퍼티는 val만 허용한다. var 형식으로 프로퍼티를 선언하기 위해서는
  * private로 지정해줘야 한다. (val element : T -> private var element : T)
+ *
+ * out과 in을 이용하여 자료형에 제한을 두는 것을 자료형 프로젝션이라고 한다.
+ * 만약 어떠한 자료형에 out을 명시한다면, 그 자료형의 데이터를 수정할 수 없도록 제한을 둘 수 있다.
  */
 open class Animal(val size : Int) {
     fun feed() = println("Feeding")
