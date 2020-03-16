@@ -11,6 +11,9 @@ fun <T> add(a : T, b : T, op : arithmetic<T>) : T {
     return op(a,b)
 }
 
+inline fun <reified T> adds(a : T, b : T){
+}
+
 fun main() {
     val result = add("hello"," bye", {a, b -> a + b})
     println(result)
