@@ -1,4 +1,4 @@
-package chap08
+package chap08.generic
 
 /**
  * 제네릭 클래스의 형식 매개변수인 T에 상, 하위 클래스를 지정하더라도 서로 관련이 없는 형식이 되기 때문에

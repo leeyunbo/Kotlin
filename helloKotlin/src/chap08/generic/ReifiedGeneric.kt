@@ -1,4 +1,4 @@
-package chap08
+package chap08.generic
 
 /**
  * reified 덕분에 실행시간에 T에 직접 접근할 수 있음

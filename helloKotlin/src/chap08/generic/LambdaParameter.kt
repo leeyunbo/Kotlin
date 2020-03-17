@@ -1,4 +1,4 @@
-package chap08
+package chap08.generic
 
 /**
  *  먄약 제네릭 메서드에서 인자들을 더하는 값을 리턴해주고 싶은 상황에 대한 예제이다.
@@ -15,6 +15,6 @@ inline fun <reified T> adds(a : T, b : T){
 }
 
 fun main() {
-    val result = add("hello"," bye", {a, b -> a + b})
+    val result = add("hello", " bye", { a, b -> a + b })
     println(result)
 }

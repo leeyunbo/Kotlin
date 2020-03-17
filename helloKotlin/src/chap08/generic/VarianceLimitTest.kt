@@ -1,4 +1,4 @@
-package chap08
+package chap08.generic
 
 /**
  * 공변성(out), 반공변성(int), 무변성에 대한 예제
@@ -33,6 +33,9 @@ fun main() {
     a1 = s1
     println("a1.size = ${a1.size}")
 
-    val c2 : VBox<Animal> = VBox<Cat>(Cat(10))
+    val c2 : VBox<Animal> =
+        VBox<Cat>(
+            Cat(10)
+        )
     println("c2.element.size = ${c2.element.size}")
 }

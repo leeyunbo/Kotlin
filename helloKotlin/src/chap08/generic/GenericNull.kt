@@ -1,4 +1,4 @@
-package chap08
+package chap08.generic
 
 /**
  * 형식 매개변수 T는 기본적으로 null을 허용하기 때문에 Int?와 같이 null을 허용하는 자료형을 사용할 수 있음

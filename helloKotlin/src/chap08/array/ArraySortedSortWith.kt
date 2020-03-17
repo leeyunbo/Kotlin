@@ -1,4 +1,4 @@
-package chap08
+package chap08.array
 
 /**
  * comparator 객체를 이용하는 방법. 만약 오른쪽으로 갈꺼면 1, 왼쪽으로 갈꺼면 -1, 그대로 둘꺼면 0
@@ -10,10 +10,10 @@ private data class Products(val name : String, val price : Double)
 fun main() {
     val products = arrayOf(
         Products("snow Ball", 870.00),
-        Products("smart Phone",1000.00),
-        Products("snow Ball",550.00),
-        Products("yunbok dinary",9999.00),
-        Products("smart Phone",50.00)
+        Products("smart Phone", 1000.00),
+        Products("snow Ball", 550.00),
+        Products("yunbok dinary", 9999.00),
+        Products("smart Phone", 50.00)
     )
 
     products.sortWith(

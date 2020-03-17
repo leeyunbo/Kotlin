@@ -1,4 +1,4 @@
-package chap08
+package chap08.generic
 
 /**
  * 타입 변수의 자료형 제한에 대한 예제
@@ -18,9 +18,9 @@ fun <T : Number> calc(arg1 : T, arg2 : T) : Double { //제네릭 메서드의 �
 
 interface InterfaceA
 interface InterfaceB
-class HandlerA : InterfaceA,InterfaceB
+class HandlerA : InterfaceA, InterfaceB
 
-class ClassA<T> where T:InterfaceA, T:InterfaceB //자료형을 두개 이상의 조건으로 제한하기 위해서는 where을 사용해야함.
+class ClassA<T> where T: InterfaceA, T: InterfaceB //자료형을 두개 이상의 조건으로 제한하기 위해서는 where을 사용해야함.
 
 fun<T> myMax(a : T, b : T) : T where T:Number, T:Comparable<T> { //제네릭 메서드의 경우
     return if(a>b) a else b

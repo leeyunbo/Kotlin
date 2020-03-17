@@ -1,4 +1,4 @@
-package chap08
+package chap08.generic
 
 /**
  * in, out, * 프로젝션에 대한 예제
@@ -14,7 +14,7 @@ class InOutTest<in T, out U>(t : T, u : U) {
     }
 }
 
-fun starTestFunc(v : InOutTest<*,*>) {
+fun starTestFunc(v : InOutTest<*, *>) {
     //v.func2(1)
     print(v.propU)
 }

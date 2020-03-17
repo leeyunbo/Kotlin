@@ -1,4 +1,4 @@
-package chap08
+package chap08.generic
 
 fun <T> find(a : Array<T>, Target : T) : Int {
     for (i in a.indices) {
@@ -13,5 +13,5 @@ fun main() {
 
     println("arr.indices ${arr1.indices}")
     println(find<String>(arr1, "Cherry"))
-    println(find<Int>(arr2,2))
+    println(find<Int>(arr2, 2))
 }

@@ -1,4 +1,4 @@
-package chap08
+package chap08.generic
 
 /**
  * 컴파일 전에 인자의 자료형을 고정할 수 없거나 예측할 수 없을 때 제네릭 타입을 사용하면
