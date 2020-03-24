@@ -2,6 +2,10 @@ package chap11
 
 import kotlinx.coroutines.*
 
+/**
+ * doWork1, doWork2는 순차적으로 진행됨!
+ * worksInSerial()이 전체적으로 비동기적으로 봐야하는 거지 doWork1, doWork2가 개별적으로 비동기적으로 진행되는건 아님
+ */
 suspend fun doWork1() : String {
     println("Work1 Start")
     delay(1000)
