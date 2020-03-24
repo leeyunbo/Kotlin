@@ -6,7 +6,7 @@ package chap11
  * 그리고 멈춘 시점에서 다시 실행을 재개. 즉, yield() 함수가 호출될 때마다 sequence 내부의 로직이 잠시 멈추고, 값을 반환한 후
  * 다시 그 위치부터 로직 진행을 재개함
  * toList로 가져온 데이터는 어딘가 저장되어 있지 않고 일회성임
- * 각 요소에 대해 접근하기 위해서는 iterator를 사용해야만 함 
+ * 각 요소에 대해 접근하기 위해서는 iterator를 사용해야만 함
  */
 val fibonacciSeq = sequence {
     var a = 0
