@@ -12,4 +12,6 @@
   <li> chap09 컬렉션 </li>
   <li> chap10 표준함수와 표준입출력 </li>
   <li> chap11 코루틴과 동시성 프로그래밍 </li>
+  <li> chap14 코틀린 안드로이드 프로그래밍 </li>
+  <li> chap15 Data Binding, MVVM 패턴 </li>
 </ul>
