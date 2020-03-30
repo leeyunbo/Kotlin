@@ -3,6 +3,7 @@
 <h4> Do it! 코틀린 프로그래밍 </h4> 
 
 <ul>
+  <li> chap02 Kotlin 기본 </li>
   <li> chap03 Functional Programming </li>
   <li> chap04 프로그램 흐름제어 </li>
   <li> chap05 클래스와 객체 </li>
