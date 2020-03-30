@@ -9,7 +9,7 @@ import java.util.*
 
 /**
  * 다양한 채널에서 무언가 응답할 때, 각 채널의 실행 시간에 따라 결과가 달라질 수 있는데
- * 이때 select를 사용하면 표현식을 통해 결과를 받을 수 있음 
+ * 이때 select를 사용하면 표현식을 통해 결과를 받을 수 있음
  */
 fun main() = runBlocking {
     val routine1 = GlobalScope.produce {
