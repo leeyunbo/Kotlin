@@ -1,4 +1,4 @@
-package chap03.section1.paramfunc
+package chap03.paramfunc
 
 fun main() {
 

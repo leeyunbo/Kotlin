@@ -1,4 +1,4 @@
-package chap03.section1.paramfunc
+package chap03.paramfunc
 
 fun main() {
     noParam({ "Hello World!" })  // 여기 안에 매개변수로 전달된 람다함수는 String 반환. 출력 , 매개변수없는 함수라면 {} 이런식으로 표현이 가능하다., 소괄호는 생략이 가능

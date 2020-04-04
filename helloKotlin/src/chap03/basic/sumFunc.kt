@@ -1,6 +1,6 @@
-package chap03.section1.basic
+package chap03.basic
 
-fun sum(a : Int, b : Int) = a + b
+private fun sum(a : Int, b : Int) = a + b
 fun max(a : Int, b : Int) = if(a>b) a else b  //함수의 각 정보는 프레임이라는 정보로 스택메모리의 높은 주소부터 거꾸로 자라듯이 채워져감
                                               // 각 프레임 안에는 변수들의 메모리 공간이 존재
 fun not_Return() : Unit { println("None") } //반환 값이 없을 때, 반환 값의 자료형은 Unit, 생략 가능

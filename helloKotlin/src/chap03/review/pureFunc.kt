@@ -1,4 +1,4 @@
-package chap03.section1.basic
+package chap03.review
 
 /**
  * 함수가 같은 인자에 대하여 늘 같은 결과를 반환하는 함수를 순수 함수라고 함 + 함수 외부(함수 외부에 존재하는 객체...)의 어떤 상태도 바꾸지 않는 함수

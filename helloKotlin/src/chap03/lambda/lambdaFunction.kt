@@ -1,4 +1,4 @@
-package chap03.section1.lambda
+package chap03.lambda
 
 fun main() {
     val greet : () -> Unit = {println("hello")}

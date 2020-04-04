@@ -1,4 +1,4 @@
-package chap03.section1.example
+package chap03.example
 
 import java.util.concurrent.locks.ReentrantLock
 var sharable : Int = 0
@@ -7,8 +7,8 @@ fun main() {
     val reLock = ReentrantLock()
     lock(reLock, ::criticalFunc)
     lock(reLock, ::criticalFunc)
-    lock(reLock, {criticalFunc()})
-    lock(reLock) {criticalFunc()}
+    lock(reLock, { criticalFunc() })
+    lock(reLock) { criticalFunc() }
 
     println(sharable)
 }

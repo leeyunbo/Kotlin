@@ -1,4 +1,4 @@
-package chap03.section1.basic
+package chap03.basic
 
 fun main() {
     val add : (Int,Int) -> Int = fun(x,y) =  x + y
@@ -7,7 +7,7 @@ fun main() {
 
     val result = add(3,5)
     println(result)
-    shortFunc(3){
+    shortFunc(3) {
         println("First Call : &it")
     }
 
@@ -17,7 +17,7 @@ fun main() {
 
 inline fun shortFunc(a : Int, crossinline out : (Int) -> Unit) {
     println("Before calling out()")
-    nestedFunc{out(a)} //nestedFunc때문에 비지역 반환을 금지해야함. 따라서 out을 crossinline으로 선언 (비지역 반환 금지)
+    nestedFunc { out(a) } //nestedFunc때문에 비지역 반환을 금지해야함. 따라서 out을 crossinline으로 선언 (비지역 반환 금지)
     println("After calling out()")
 }
 

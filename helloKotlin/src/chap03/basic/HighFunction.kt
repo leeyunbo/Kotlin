@@ -1,4 +1,4 @@
-package chap03.section1.basic
+package chap03.basic
 
 fun highOrder(sum : (Int, Int) -> Int, a : Int, b : Int) : Int {
     return sum(a,b)
@@ -9,7 +9,7 @@ val otherLambda : () -> Boolean = {
     true
 }
 
-fun callByName(b : () -> Boolean) : Boolean {
+private fun callByName(b : () -> Boolean) : Boolean {
     println("call By Name")
     return b()
 }

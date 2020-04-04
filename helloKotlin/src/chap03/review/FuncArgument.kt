@@ -1,4 +1,4 @@
-package chap03.section1.basic
+package chap03.review
 
 /**
  * 고차 함수
@@ -7,8 +7,8 @@ package chap03.section1.basic
  */
 
 fun main() {
-    val res1 = argSum(3,2)
-    val res2 = argMul(argSum(3,2), 3)
+    val res1 = argSum(3, 2)
+    val res2 = argMul(argSum(3, 2), 3)
 }
 
 fun argSum(a: Int, b: Int) = a + b

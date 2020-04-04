@@ -1,4 +1,4 @@
-package chap03.section1.lambda
+package chap03.lambda
 
 //함수형 프로그래밍의 정의와 특징
 //1. 순수 함수를 사용해야 한다.
