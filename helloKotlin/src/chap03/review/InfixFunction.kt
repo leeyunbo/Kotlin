@@ -6,7 +6,7 @@ package chap03.review
  * 2. 중위 함수의 조건
  * - 멤버 메서드 또는 확장 함수
  * - 하나의 매개변수
- * - infix 키워드 사용 
+ * - infix 키워드 사용
  */
 fun main() {
     val multi = 3 multiply 10
