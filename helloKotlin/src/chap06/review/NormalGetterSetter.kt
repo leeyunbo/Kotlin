@@ -22,7 +22,11 @@ class User(_id: Int, _name: String, _age: Int) {
     var age: Int = _age
         get() = field
         set(value) {
-            field = value
+            field = when {
+                value < 18 -> 18
+                value in 18..30 -> value
+                else -> value - 3
+            }
         }
 
 
