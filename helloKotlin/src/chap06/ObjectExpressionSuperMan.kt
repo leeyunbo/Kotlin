@@ -2,7 +2,7 @@ package chap06
 
 /**
  * object 선언과 달리 표현식은 이름이 없으며 싱글톤이 아니다.
- * object 표현식이 사용될 때마다 새로운 인스턴스가 생성된다. 
+ * object 표현식이 사용될 때마다 새로운 인스턴스가 생성된다.
  */
 open class Superman() {
     fun work() = println("taking photos")
