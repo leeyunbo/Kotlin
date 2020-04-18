@@ -17,25 +17,46 @@ package chap07.review
  * 만약 인터페이스에 여러 클래스가 사용해야하는 공통적인 메서드가 포함되어있었다면 그것을 모든 클래스가 직접 구현해야하는 비효율적인 작업을 해야만 했음
  * 그래서 등장한 것이 default 메서드. 구현된 메서드를 추가할 수 있게 됨
  * 코틀린은 기본적으로 지원을 하므로 default가 따로 필요 없다.
+ *
+ * 추가) 인터페이스 활용 방법
+ * 인터페이스를 이용하면 다형성을 증진시킬 수 있다.
+ * Dog와 Cat이 인터페이스 Pet을 상속받음으로써, 메서드 인자로 Pet 타입으로 둘다 받을 수 있게 됨
  */
+
+open class Animal(val name: String)
 
 interface Pet {
     var category: String
+    var species: String
     fun feeding()
     fun patting() {
         println("Kepp patting!")
     }
 }
 
-class Cat(override var category: String) : Pet {
+class Cat(override var category: String, override var species: String) : Pet {
     override fun feeding() {
         println("Feed the cat a tuna can!")
     }
 }
 
+class Dog(override var category: String, override var species: String) : Pet {
+    override fun feeding() {
+        println("Feed the dog a bone")
+    }
+}
+
+class Master {
+    fun playWithPet(pet: Pet) {
+        println("Enjoy with my ${pet.species}.")
+    }
+}
+
 fun main() {
-    val obj = Cat("small")
-    println("Pet Category : ${obj.category}")
-    obj.feeding()
-    obj.patting()
+    val obj = Cat("small", "cat")
+    val obj2 = Dog("big","dog")
+    val master = Master()
+
+    master.playWithPet(obj)
+    master.playWithPet(obj2)
 }
