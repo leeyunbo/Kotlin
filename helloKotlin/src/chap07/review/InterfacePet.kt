@@ -25,22 +25,22 @@ package chap07.review
 
 open class Animal(val name: String)
 
-interface Pet {
-    var category: String
-    var species: String
-    fun feeding()
+abstract class Pet {
+    abstract var category: String
+    abstract var species: String
+    abstract fun feeding()
     fun patting() {
         println("Kepp patting!")
     }
 }
 
-class Cat(override var category: String, override var species: String) : Pet {
+class Cat(override var category: String, override var species: String) : Pet() {
     override fun feeding() {
         println("Feed the cat a tuna can!")
     }
 }
 
-class Dog(override var category: String, override var species: String) : Pet {
+class Dog(override var category: String, override var species: String) : Pet() {
     override fun feeding() {
         println("Feed the dog a bone")
     }
